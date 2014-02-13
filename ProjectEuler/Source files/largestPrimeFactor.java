@@ -29,15 +29,17 @@ public class largestPrimeFactor extends userInput
 		int k;
 		k = 2;
 		boolean isPrime = true;
-		while(isPrime)
+		while(isPrime && k<(theNumber/2))
 		{
 			if(theNumber%k == 0)
 			{
 				isPrime = false;
+				System.out.println("Not prime");
+				break;
+				
 			}
 			k++;
 		}
-		
 		
 	}
 	

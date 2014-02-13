@@ -14,6 +14,7 @@ public class eulerSolutions
 		k = 0;
 		k = in.getInt();
 		System.out.println(""+k);
+		solution.checkIfPrime(38);
 	
 	}
 
