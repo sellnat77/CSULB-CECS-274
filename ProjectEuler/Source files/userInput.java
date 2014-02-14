@@ -21,6 +21,12 @@ public class userInput
 		return userInput.nextDouble();
 	}
 	
+	//Returns a long value
+	public long getLong()
+	{
+		return userInput.nextLong();
+	}
+	
 	//Returns a string
 	public String getString()
 	{
