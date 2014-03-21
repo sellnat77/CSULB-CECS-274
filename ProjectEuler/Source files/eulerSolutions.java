@@ -7,9 +7,9 @@ public class eulerSolutions
 {
 	public static void main(String[] Theory)
 	{
-		largestPrimeFactor solution = new largestPrimeFactor();
+		primeFinder solution = new primeFinder();
 		
-		solution.findPrimeFactors();
+		solution.getPrime();
 	
 	}
 
