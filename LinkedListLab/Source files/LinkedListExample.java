@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class LinkedListExample 
 {
+	Scanner userInput = new Scanner(System.in);
+	
+	LinkedList <String> origNames = new LinkedList<String>();
+	LinkedList <String> newNames = new LinkedList<String>(); 	
 	LinkedListExample(){}
 	
 	int getANumber()
@@ -50,25 +54,17 @@ public class LinkedListExample
 	
 	void deleteNameMatch()
 	{
-		int k;
 		String name;
 		newNames = origNames;
 		System.out.println("What name do you want to delete?");
 		name = userInput.next();
 		
 		newNames.removeFirstOccurrence(name);
-		/*for(k = 0; k < newNames.size(); k++)
-		{
-			if(newNames.== name)
-			{
-				newNames.remove(k);
-			}
-		}
-		*/
+
 		this.printLList(newNames);
 	}
 	
-	void printLList(LinkedList listToPrint)
+	void printLList(LinkedList<String> listToPrint)
 	{
 		int k;
 		
@@ -77,9 +73,4 @@ public class LinkedListExample
 			System.out.println(k+".) " + listToPrint.get(k));
 		}		
 	}
-
-	Scanner userInput = new Scanner(System.in);
-	
-	LinkedList <String> origNames = new LinkedList<String>();
-	LinkedList <String> newNames = new LinkedList<String>(); 
 }
