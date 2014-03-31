@@ -21,6 +21,17 @@ public class lListCaller
 		tan.insertAfter("new first", "POOP", 1006);
 		
 		tan.printList();
+		
+		tan.insertAfter("new first" , "blarg", 10007);
+			
+		tan.printList();
+		
+		tan.isPresent("POOP");
+		
+		tan.delete("POOP");
+		tan.printList();
+		tan.isPresent("POOP");
+		tan.printList();
 
 		
 	}

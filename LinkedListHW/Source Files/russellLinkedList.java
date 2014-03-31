@@ -37,21 +37,44 @@ public class russellLinkedList extends russellLink
 	}
 	public void isPresent(String nameToSearch)
 	{
+		int k;
+		boolean found = false;
+		for(k = 0; k < theList.size(); k++)
+		{
+			if(theList.get(k).getName()==nameToSearch)
+			{
+				System.out.println("Yes it is present!");
+				found = true;
+				break;
+			}
+		}		
 		
-		
+		if(!found)
+		{
+			System.out.println("Nope! Not here!");
+		}
 	}
-	public void delete()
+	public void delete(String nameToSearch)
 	{
-		
+		int k;
+		for(k = 0; k < theList.size(); k++)
+		{
+			if(theList.get(k).getName()==nameToSearch)
+			{
+				theList.remove(k);
+				break;
+			}
+		}		
 	}
 	public void printList()
 	{
 		int k;
 		for(k = 0; k < theList.size(); k++)
 		{
-			System.out.print(theList.get(k).getID()+", "+theList.get(k).getName()+"||||");
+			System.out.println(theList.get(k).getID()+", "+theList.get(k).getName());
 		}
 		
+		System.out.println("\n\n\n\n\n");
 	}
 
 }
