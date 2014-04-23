@@ -26,7 +26,7 @@ public class tree
 	
 	public void insert(int data)
 	{
-		treeNode = insert(treeNode,data);
+		
 		
 	}
 
