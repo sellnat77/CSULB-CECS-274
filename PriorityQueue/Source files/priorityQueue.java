@@ -1,6 +1,12 @@
+/**
+ * Name: Russell Tan
+ * Class: CECS 274
+ * Description: This class creates a priority queue of names and prints out the 
+ * user-specified priority first then prints the rest of the names in alphabetical order
+ */
+
 import java.util.PriorityQueue;
 import java.util.Scanner;
-
 
 public class priorityQueue 
 {
@@ -34,13 +40,15 @@ public class priorityQueue
 		{
 			System.out.println("Whos print job is this?");
 			this.setPeople(k, userInput.nextLine());
+			
 			printer.add(this.getPeople(k));
 		}
 	}
 	
 	public void assignPriority()
 	{
-		System.out.println("Who gets priority?");
+		System.out.println("\tWho gets priority?");
+		System.out.print("\t");
 		this.setPriority(userInput.nextLine());
 	}
 	
@@ -54,11 +62,13 @@ public class priorityQueue
 			{
 				System.out.println("Printed: " +this.getPriority());
 				printer.remove(this.getPriority());
+				
 				System.out.println("\n"+printer.toString());
 			}
 			else
 			{
 				System.out.println("Printed: " + printer.remove());
+				
 				System.out.println("\n"+printer.toString());
 			}
 		}
@@ -66,5 +76,15 @@ public class priorityQueue
 		System.out.println("\n"+printer.toString());
 		System.out.println("Printed: " + printer.remove());
 	}
-
+	public void simplePrint()
+	{
+		System.out.println(printer.toString());
+		System.out.println("Printed: " + printer.remove());
+		System.out.println(printer.toString());
+		System.out.println("Printed: " +this.getPriority());
+		printer.remove(this.getPriority());
+		System.out.println(printer.toString());
+		System.out.println("Printed: " + printer.remove());
+		System.out.println(printer.toString());
+	}
 }
