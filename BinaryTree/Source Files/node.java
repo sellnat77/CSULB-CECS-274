@@ -1,14 +1,32 @@
 
 public class node 
 {
-	private node left, right;
+	public node left, right;
 	private int dataToBeWritten;
+	
+	public node(){}
 	
 	public node (int A)
 	{
-		left = null;
+		setLeft(null);
 		right = null;
-		dataToBeWritten = A;
+		setDataToBeWritten(A);
+	}
+
+	public int getDataToBeWritten() {
+		return dataToBeWritten;
+	}
+
+	public void setDataToBeWritten(int dataToBeWritten) {
+		this.dataToBeWritten = dataToBeWritten;
+	}
+
+	public node getLeft() {
+		return left;
+	}
+
+	public void setLeft(node left) {
+		this.left = left;
 	}
 
 }

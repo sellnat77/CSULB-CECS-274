@@ -8,6 +8,20 @@ public class tree
 	private int data;
 	private node treeNode;
 	private LinkedList<Integer> tree = new LinkedList<Integer>();
+	private node root;
+	
+	tree()
+	{
+		root = null;
+	}
+	
+	tree(int treeData, node left, node right)
+	{
+		root = new node();
+		root.setDataToBeWritten(treeData);
+		root.left = left.root;
+		root.right = right.root;
+	}
 	
 	public void setData(int A)
 	{
