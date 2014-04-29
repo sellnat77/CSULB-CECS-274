@@ -2,33 +2,88 @@ package biaryTreeRedo;
 
 public class node {
 	public Integer data;
-	public node leftLink;
-	public node rightLink;
+	public node leftChild;
+	public node rightChild;
 
 	public void addNode(node newNode)
 	{
 		int compare = newNode.data.compareTo(data);
+		
 		if(compare < 0)
 		{
-			if(leftLink == null)
+			if(leftChild == null)
 			{
-				leftLink = newNode;
+				leftChild = newNode;
 			}
 			else
 			{
-				leftLink.addNode(newNode);
+				leftChild.addNode(newNode);
 			}
 		}
 		else if(compare > 0)
 		{
-			if(rightLink == null)
+			if(rightChild == null)
 			{
-				rightLink = newNode;
+				rightChild = newNode;
 			}
 			else
 			{
-				rightLink.addNode(newNode);
+				rightChild.addNode(newNode);
 			}
 		}
+	}
+	
+	public void insert(node newNode, node parentNode)
+	{
+  		int comp = parentNode.data-newNode.data;
+  		if(comp > 0)
+	 	{
+			if(leftChild == null)
+			{
+	 			leftChild = newNode;
+	 		}
+			else
+			{
+	 			leftChild.insert(newNode,leftChild);
+	 		}
+		}
+  		else if(comp < 0)
+	 	{
+			if(rightChild == null)
+			{
+	 			rightChild = newNode;
+	 		}
+			else
+			{
+	 			rightChild.insert(newNode,rightChild);
+	 		}
+		}
+	}
+	
+	public void delete(Integer deleteNum, node parentNode)
+	{
+		int comp = parentNode.data-deleteNum;
+  		if(comp > 0)
+	 	{
+			if(leftChild == null)
+			{
+	 			leftChild = newNode;
+	 		}
+			else
+			{
+	 			leftChild.insert(newNode,leftChild);
+	 		}
+		}
+  		else if(comp < 0)
+	 	{
+			if(rightChild == null)
+			{
+	 			rightChild = newNode;
+	 		}
+			else
+			{
+	 			rightChild.insert(newNode,rightChild);
+	 		}
+		}		
 	}
 }
