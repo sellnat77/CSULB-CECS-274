@@ -43,5 +43,75 @@ public class tree
 		
 		
 	}
+	/*
+	 * NOTES:
+	 * 
+	 * int comp = prentnode.data-newnode.data
+	 * 	if(comp>0)
+	 * {
+	 * 		place child on left
+	 * }
+	 * 
+	 *******INSERTION********
+	 * public void insert(myNode newNode, myNode parentNode)
+	 * {
+	 * 		int comp = parentNode.data-newNode.data;
+	 * 		if(comp > 0)
+	 **		{
+	 *			if(leftChild == null)
+	 *			{
+	 *				lftChild = newNode;
+	 *			}
+	 *			else
+	 *			{
+	 *				leftChild.insert(newNode,leftChild);
+	 *			}
+	 *		}
+	 *		else if(comp < 0)
+	 *		{
+	 *			if(rightChild == null)
+	 *			{
+	 *				rightChild = newNode;
+	 *			}
+	 *			else
+	 *			{
+	 *				rightChild.insert(newNode,rightChild);
+	 *			}
+	 *		}
+	 * }
+	 * 
+	 * ************DELETION********
+	 * public void delete(int deleteNum, myNode parentNode)
+	 * {
+	 * 		int comp = parentNode.data-deleteNum; 
+     *		if(comp > 0)
+	 *		{
+	 *			if(leftChild == null)
+	 *			{
+	 *				leftChild = newNode;
+	 *			}
+	 *			else
+	 *			{
+	 *				leftChild.insert(newNode,leftChild);
+	 *			}
+	 *		}
+	 *		else if(comp < 0)
+	 *		{
+	 *			if(rightChild == null)
+	 *			{
+	 *				rightChild = newNode;
+	 *			}
+	 *			else
+	 *			{
+	 *				rightChild.insert(newNode,rightChild);
+	 *			}
+	 *		}
+	 *		else if( comp == 0)
+	 *		{
+	 *			parentNode.leftChild = null;
+	 *		}	 
+	 * }
+	 * 
+	 */
 
 }
