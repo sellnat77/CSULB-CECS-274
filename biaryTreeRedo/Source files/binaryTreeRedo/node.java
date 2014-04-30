@@ -1,9 +1,10 @@
-package biaryTreeRedo;
+package binaryTreeRedo;
 
 public class node {
 	public Integer data;
 	public node leftChild;
 	public node rightChild;
+	public node parent = null;
 
 	public void addNode(node newNode)
 	{
@@ -60,30 +61,5 @@ public class node {
 		}
 	}
 	
-	public void delete(Integer deleteNum, node parentNode)
-	{
-		int comp = parentNode.data-deleteNum;
-  		if(comp > 0)
-	 	{
-			if(leftChild == null)
-			{
-	 			leftChild = newNode;
-	 		}
-			else
-			{
-	 			leftChild.insert(newNode,leftChild);
-	 		}
-		}
-  		else if(comp < 0)
-	 	{
-			if(rightChild == null)
-			{
-	 			rightChild = newNode;
-	 		}
-			else
-			{
-	 			rightChild.insert(newNode,rightChild);
-	 		}
-		}		
-	}
+	
 }
