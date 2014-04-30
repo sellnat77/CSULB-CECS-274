@@ -25,20 +25,7 @@ public class treeCall
 			
 			count++;
 		}	
-		tree.insert(5);
-		tree.insert(4);
-		tree.insert(6);
-		tree.insert(12);
-		tree.insert(0);
-		tree.insert(9);
-		tree.insert(4);
-		tree.print();
-		tree.delete(4);
-		tree.print();
-		System.out.println("pre");
-		tree.printPre();
-		System.out.println("post");
-		tree.printPost();
+		tree.askForMore();
 
 		
 	}

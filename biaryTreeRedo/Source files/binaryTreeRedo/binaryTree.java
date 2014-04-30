@@ -1,8 +1,11 @@
 package binaryTreeRedo;
 
+import java.util.Scanner;
+
 public class binaryTree 
 {
 	private node root;
+	private Scanner userInput = new Scanner(System.in);
 	
 	binaryTree()
 	{
@@ -222,6 +225,43 @@ public class binaryTree
 			int leftData = parentNode.leftChild.data;
 			int rightData = parentNode.rightChild.data;
 			System.out.print("[" + leftData + " " + parentNode.data + " " + rightData + "]");
+		}
+	}
+	public void askForMore()
+	{
+		int choice;
+		int data;
+		System.out.println("Would you like to add another number(1), delete a number(2), or finish(3)");
+		choice = userInput.nextInt();
+		
+		switch(choice)
+		{
+		case 1:
+			System.out.println("What would you like to add?");
+			data = userInput.nextInt();
+			this.insert(data);
+			this.askForMore();
+			break;
+		case 2:
+			System.out.println("What would you like to delete?");
+			data = userInput.nextInt();
+			this.delete(data);
+			System.out.println("\tHere is the tree in \"In-Order\"");
+			this.print();
+			System.out.println("\n\tHere is the tree in \"Pre-Order\"");
+			this.printPre();
+			System.out.println("\n\tHere is the tree in \"Post-Order\"");
+			this.printPost();
+			this.askForMore();
+			break;
+		default:
+			System.out.println("\tHere is the tree in \"In-Order\"");
+			this.print();
+			System.out.println("\n\tHere is the tree in \"Pre-Order\"");
+			this.printPre();
+			System.out.println("\n\tHere is the tree in \"Post-Order\"");
+			this.printPost();
+			break;
 		}
 	}
 }
