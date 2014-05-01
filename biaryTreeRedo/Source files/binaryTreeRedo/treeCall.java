@@ -1,3 +1,13 @@
+/**
+ * Name: Russell Tan
+ * Class: CECS 274
+ * Description: This is the calling program for the second
+ * iteration of the binary tree program. it asks for the inital
+ * amount of numbers to be addded to the tree and prints the tree each iteration
+ * then it calls on a recursive method to ask for more number, delete a number, 
+ * or finish the program
+ */
+
 package binaryTreeRedo;
 import java.util.Scanner;
 

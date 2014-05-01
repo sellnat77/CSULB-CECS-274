@@ -1,3 +1,13 @@
+/**
+ * Name: Russell Tan
+ * Class: CECS 274
+ * Description: This is the tree class that has the methods to create a binary tree
+ * it can also insert nodes into the tree, delete nodes, and print the tree. It 
+ * also prints the tree in pre and post order. The last method askForMore() 
+ * is a recursive function that prompts the user if they want to add more numbers, 
+ * delete nodes, or complete the program
+ */
+
 package binaryTreeRedo;
 
 import java.util.Scanner;

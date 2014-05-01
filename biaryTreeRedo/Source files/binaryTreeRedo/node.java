@@ -1,10 +1,17 @@
+/**
+ * Name: Russell Tan
+ * Class: CECS 274
+ * Description: This is the basic node class that has a variable for the data it
+ * carries, the left child, and the right child. It also has a method to add a 
+ * node, as well as insert a node given the node to add and the parent node
+ */
+
 package binaryTreeRedo;
 
 public class node {
 	public Integer data;
 	public node leftChild;
 	public node rightChild;
-	public node parent = null;
 
 	public void addNode(node newNode)
 	{
